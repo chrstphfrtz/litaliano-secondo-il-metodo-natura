@@ -27,32 +27,32 @@ Carlo Rossi. Bruno è fratello **di** Pia. **Anche** Pietro è fratello di Pia.
 
 ## Esercizio C
 
-Quanti sono i fratelli di Pia?    
+Quanti sono i fratelli di Pia?  
 **I fratelli di Pia sono due.**
 
-Chi è il padre di Pia?  
+Chi è il padre di Pia?
 **Il padre di Pia è Carlo Rossi.**
 
-Chi è la moglie di Carlo Rossi?  
+Chi è la moglie di Carlo Rossi?
 **La moglie di Carlo Rossi è Teresa Rossi.**
 
-Quante figlie hanno Carlo e Teresa Rossi?  
+Quante figlie hanno Carlo e Teresa Rossi?
 **Carlo e Teresa Rossi hanno due figlie.**
 
-Chi sono le figlie di Carlo e Teresa Rossi?  
+Chi sono le figlie di Carlo e Teresa Rossi?
 **Le figlie di Carlo e Teresa Rossi sono Pia e Maria.**
 
-Quanti figli ha Teresa Rossi?  
+Quanti figli ha Teresa Rossi?
 **Teresa Rossi ha due figli.**
 
-Ha due sorelle Pia?  
+Ha due sorelle Pia?
 **Pia non ha due sorelle.**
 
-È fratello di Bruno Pietro?  
+È fratello di Bruno Pietro?
 **Sì, Pietro è fratello di Bruno.**
 
-È una bambina Maria?  
+È una bambina Maria?
 **Sì, Maria è una bambina.**
 
-Hanno tre figlie Carlo e Teresa Rossi?  
+Hanno tre figlie Carlo e Teresa Rossi?
 **No, Carlo e Teresa Rossi hanno due figlie.**
