@@ -2,6 +2,7 @@
 
 esercizi=(
   capitolo-01/esercizi
+  capitolo-02/esercizi
   capitolo-03/esercizi
 )
 lexica=(
