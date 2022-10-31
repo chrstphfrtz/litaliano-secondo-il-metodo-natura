@@ -1,4 +1,4 @@
-# Capitolo 3
+# Capitolo 3 - Esercizi
 
 ## Esercizio A
 
