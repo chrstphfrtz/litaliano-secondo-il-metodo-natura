@@ -10,12 +10,11 @@ lexica=(
 langs=(
   german
   english
-  italian
 )
 
 convert() {
-	local pdf_folder="$1/pdf"
-	local md_folder="$1/md"
+  local pdf_folder="$1/pdf"
+  local md_folder="$1/md"
 
 	if ! mkdir "$pdf_folder" >/dev/null 2>&1; then
 		printf "SKIP: Create pdf folder %s - it most likely exists already\n" "$pdf_folder"
@@ -23,16 +22,27 @@ convert() {
 		printf "OK: Create pdf folder %s\n" "$pdf_folder"
 	fi
 
-	for lang in "${langs[@]}"; do
-		local lang_pdf_path="$pdf_folder/$lang.pdf"
-		local lang_md_path="$md_folder/$lang.md"
+  if [[ "$1" =~ .*esercizi* ]]; then
+		local lang_pdf_path="$pdf_folder/esercizi.pdf"
+		local lang_md_path="$md_folder/esercizi.md"
 
-		if ! pandoc --from markdown -o "$lang_pdf_path" --pdf-engine=xelatex -V mainfont="MesloLGS NF" "$lang_md_path" >/dev/null 2>&1; then
-			printf "SKIP: Convert %s to %s - it most likely does not exist\n" "$lang_md_path" "$lang_pdf_path"
-		else
-			printf "OK: Convert %s to %s\n" "$lang_md_path" "$lang_pdf_path"
-		fi
-	done
+    pandoc_convert "$lang_pdf_path" "$lang_md_path"
+  else
+    for lang in "${langs[@]}"; do
+      local lang_pdf_path="$pdf_folder/$lang.pdf"
+      local lang_md_path="$md_folder/$lang.md"
+
+      pandoc_convert "$lang_pdf_path" "$lang_md_path"
+    done
+  fi
+}
+
+pandoc_convert() {
+  if ! pandoc --from markdown -o "$1" --pdf-engine=xelatex -V mainfont="MesloLGS NF" "$2" >/dev/null 2>&1; then
+    printf "SKIP: Convert %s to %s - it most likely does not exist\n" "$1" "$2"
+  else
+    printf "OK: Convert %s to %s\n" "$1" "$2"
+  fi
 }
 
 need_cmd() {
@@ -59,9 +69,6 @@ main() {
 		convert "$lexicon"
 	done
 
-	for mel in "${meletemata[@]}"; do
-		convert "$mel"
-	done
 	printf "Finished.\n"
 }
 
