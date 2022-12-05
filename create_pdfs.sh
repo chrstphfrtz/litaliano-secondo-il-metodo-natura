@@ -5,6 +5,7 @@ esercizi=(
   capitolo-02/esercizi
   capitolo-03/esercizi
   capitolo-04/esercizi
+  capitolo-05/esercizi
 )
 lexica=(
 )
